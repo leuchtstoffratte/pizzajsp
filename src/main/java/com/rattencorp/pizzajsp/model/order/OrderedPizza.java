@@ -16,6 +16,10 @@ public class OrderedPizza implements Serializable {
         return pizzaType.name();
     }
 
+    PizzaType getPizzaType() {
+        return pizzaType;
+    }
+
     /**
      * price is given in cents!
      */

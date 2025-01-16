@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="21da7c99-b201-4a43-9d30-b730fd3ce6c3" name="wildfly35" url="http://localhost:8080">
+        <fileTransfer mountedRoot="$USER_HOME$/Coding/appServer/wildfly-35.0.0.Final/standalone/deployments" accessType="MOUNT" port="0" />
+      </webServer>
+    </option>
+  </component>
+</project>
