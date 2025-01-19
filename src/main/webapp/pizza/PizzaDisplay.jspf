@@ -10,15 +10,17 @@
     <%if( pizza.pizzaType().vegan()) {%>
         <img src="icons/vegan.jpg" alt="vegan">
     <%}%>
-    <form action="com.rattencorp.pizzajsp.controller.PizzaSelectionController">
-        <input type="button" value="+" name="${pizza.pizzaAppenderName()}" /> <!-- should add pizza to current order -->
-    </form>
-    <form action="com.rattencorp.pizzajsp.controller.PizzaSelectionController">
-        <input type="button" value="-" name="${pizza.pizzaAppenderName()}"/>
-    </form>
-<%--    <label>
+    <label>
         <input type="number" name="${pizza.pizzaAmountName()}"><%currentOrder.getOrderedAmountForType(pizza.pizzaType()); %></input>
     </label>
---%>
+
+    <form action="${pageContext.request.contextPath}/select-pizzas-controller" method="post">
+        <input type="submit" value="+" name="${pizza.pizzaAppenderName()}" /> <!-- should add pizza to current order -->
+    </form>
+    <form action="${pageContext.request.contextPath}/select-pizzas-controller" method="post">
+        <input type="submit" value="-" name="${pizza.pizzaAppenderName()}"/>
+    </form>
+
+
 
 </p>
