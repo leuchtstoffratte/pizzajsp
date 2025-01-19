@@ -1,9 +1,24 @@
 <p>
-
     <!-- fragment handling the immediate display of a pizza-->
 
-
-
-    <img src="" alt="">
+    <h2>
+        <%=pizza.pizzaType().name()%>
+    </h2>
+    <%if( pizza.pizzaType().vegetarian()) {%>
+        <img src="icons/vegetarian.jpg" alt="vegetarian">
+    <%}%>
+    <%if( pizza.pizzaType().vegan()) {%>
+        <img src="icons/vegan.jpg" alt="vegan">
+    <%}%>
+    <form action="com.rattencorp.pizzajsp.controller.PizzaSelectionController">
+        <input type="button" value="+" name="${pizza.pizzaAppenderName()}" /> <!-- should add pizza to current order -->
+    </form>
+    <form action="com.rattencorp.pizzajsp.controller.PizzaSelectionController">
+        <input type="button" value="-" name="${pizza.pizzaAppenderName()}"/>
+    </form>
+<%--    <label>
+        <input type="number" name="${pizza.pizzaAmountName()}"><%currentOrder.getOrderedAmountForType(pizza.pizzaType()); %></input>
+    </label>
+--%>
 
 </p>

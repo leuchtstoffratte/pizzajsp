@@ -3,11 +3,16 @@ package com.rattencorp.pizzajsp.model.order;
 import com.rattencorp.pizzajsp.model.menue.PizzaType;
 import jakarta.enterprise.context.SessionScoped;
 
+import java.io.Serial;
 import java.io.Serializable;
 import java.util.*;
 
 @SessionScoped
 public class CurrentOrder implements Serializable {
+
+    @Serial
+    private static final long serialVersionUID = 1L;
+
 
     private final List<OrderedPizza> pizzas;
 

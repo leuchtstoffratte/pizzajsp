@@ -16,7 +16,7 @@
         <maven.compiler.source>21</maven.compiler.source>
         <junit.version>5.11.0</junit.version>
         <log4j.version>2.24.3</log4j.version>
-        <jakarta.version>11.0.0-M4</jakarta.version>
+        <jakarta.version>10.0.0</jakarta.version>
         <jakarta.mvc.version>2.1.0</jakarta.mvc.version>
     </properties>
 
@@ -27,6 +27,21 @@
             <version>${jakarta.version}</version>
             <scope>provided</scope>
         </dependency>
+
+        <dependency>
+            <groupId>jakarta.platform</groupId>
+            <artifactId>jakarta.jakartaee-web-api</artifactId>
+            <version>${jakarta.version}</version>
+            <scope>provided</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>jakarta.platform</groupId>
+            <artifactId>jakarta.jakartaee-core-api</artifactId>
+            <version>${jakarta.version}</version>
+            <scope>provided</scope>
+        </dependency>
+
         <dependency>
             <groupId>jakarta.mvc</groupId>
             <artifactId>jakarta.mvc-api</artifactId>
