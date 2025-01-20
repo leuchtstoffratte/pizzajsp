@@ -44,6 +44,15 @@ public class CurrentOrder implements Serializable {
         return orderedTypes.getOrDefault(type, 0);
     }
 
+    /**
+     * workaround to mitigate JSP's inability to work with records
+     * @param type {@link OrderedPizza}
+     * @return {@link Integer} or 0
+     */
+    public Integer getOrderedAmountForPizza(OrderedPizza type) {
+        return orderedTypes.getOrDefault(type.getPizzaType(), 0);
+    }
+
     public double price(){
         return ((double) pizzas
                 .stream()

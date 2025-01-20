@@ -11,7 +11,8 @@
         <img src="icons/vegan.jpg" alt="vegan">
     <%}%>
     <label>
-        <input type="number" name="${pizza.pizzaAmountName()}"><%currentOrder.getOrderedAmountForType(pizza.pizzaType()); %></input>
+<%--        <input type="number" name="${pizza.pizzaAmountName()}"><%currentOrder.getOrderedAmountForType(pizza.pizzaType()); %></input> --%>
+        <input type="number" name="${pizza.pizzaAmountName()}" value="${currentOrder.getOrderedAmountForPizza(pizza)}"/>
     </label>
 
     <form action="${pageContext.request.contextPath}/select-pizzas-controller" method="post">
